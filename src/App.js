@@ -4,7 +4,7 @@ import Home from "./components/Home";
 
 function App() {
   return (
-    <div>
+    <div className="loginBody">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />

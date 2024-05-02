@@ -1,6 +1,48 @@
-.diiv{
-    border:1px solid black;
+.loginBody{
+    background-color: #F0F2F5;
 }
-/* .cstm_row{
-    min-height: 500px;
+.diiv{
+    /* border:1px solid black; */
+    place-content: center;
+    padding-left:30px;
+    padding-right:30px;
+}
+.diiv2{
+    place-content: center;
+    padding-left:100px;
+    padding-right:100px;
+}
+.cstm_row{
+    min-height: 100vh;
+}
+.forgotLink>a{
+    text-decoration: none;
+}
+.forgotLink>a:hover{
+    text-decoration:underline;
+}
+.loginform{
+    background-color: white;
+    padding:20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px lightgray;
+}
+.left>img{
+    height:auto;
+    width:60%;
+    margin-left:-30px;
+}
+/* .left>h3{
+    padding-left: 30px;
 } */
+.buttonDiv>button{
+    font-weight: 700;
+}
+.afterform>p > a{
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+.afterform>p > a:hover{
+    text-decoration: underline;
+}

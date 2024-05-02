@@ -9,52 +9,52 @@ import Row from 'react-bootstrap/Row';
 
 const Login = () => {
     return (
-        <div className="container">
+        <div className="container loginBody">
             <div className="row cstm_row">
-                <div className="col-6 diiv">
-                    <div>
-                        <img src='https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg' height={200} width={200}/>
-                        <h1>
-                        Facebook helps you connect and share with the people in your life.
-                        </h1>
+                <div className="col-12 col-lg-6 col-sm-12 diiv">
+                    <div className='left'>
+                        <img src='https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg' height={50} width={200} />
+                        <h3>
+                            Facebook helps you connect and share with the people in your life.
+                        </h3>
                     </div>
                 </div>
-                <div className="col-6 diiv ">
-                    {/* <form className='d-grid'>
-                        <input type='email' placeholder='Email address or phone number'/>
-                        <input type='password' placeholder='Password'/>
-                        <button className='btn btn-primary'>Login</button>
-                        <Link href="#">Forgotten password?</Link>
-                        <hr />
-                        <div>
-                            <button className='btn btn-success'>Create new account</button>
-                        </div>
-                    </form> */}
-                    <Form>
-                        <Row>
-                            <Col>
-                                <Form.Control placeholder="First name" />
+                <div className="col-12 col-lg-6 col-sm-12 diiv2 ">
+
+                    <Form className='loginform'>
+                        <Row className=''>
+                            <Col className=''>
+                                <Form.Control type="email" placeholder="Email address or phone no" />
                             </Col>
 
                         </Row>
-                        <Row>
-                            <Col>
-                                <Form.Control placeholder="Last name" />
+                        <Row className='mt-3'>
+                            <Col className=''>
+                                <Form.Control type="password" placeholder="Password" />
                             </Col>
                         </Row>
-                        <Row>
-                            <button className='btn btn-primary'>Log In</button>
+                        <Row className='mt-3'>
+                            <div className='buttonDiv '>
+                                <button className='btn btn-primary w-100 p-2'>Log In</button>
+                            </div>
+
                         </Row>
-                        <Row>
-                            <div>
+                        <Row className='mt-3'>
+                            <div className=' text-center forgotLink'>
                                 <Link href="#">Forgotten password?</Link>
                             </div>
                         </Row>
                         <hr />
-                        <Row>
-                            <button className='btn  btn-success'>Create new account</button>
+                        <Row className='mt-3 text-center'>
+                            <div className='buttonDiv'>
+                                <button className='btn  w-60 p-2' style={{backgroundColor:"#42B72A",color:"white"}}>Create new account</button>
+                            </div>
+
                         </Row>
                     </Form>
+                    <div className='afterform w-100 text-center mt-3'>
+                        <p>{"   "}<Link href="#">Create a Page</Link>{"   "}for a celebrity, brand, business</p>
+                    </div>
                 </div>
             </div>
 
