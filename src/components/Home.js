@@ -66,7 +66,7 @@ const Home = () => {
                 <div className='row'>
                     <div className='col-3'>
                         <div>
-                            <ul>
+                            <ul className="sideList">
                                 <li className='d-flex'>
                                     <img src='/resources/unnamed.jpg' height={40} width={40}/>
                                     <h5>Sudhansu Srivastava</h5>
