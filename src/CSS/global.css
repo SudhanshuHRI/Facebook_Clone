@@ -112,8 +112,18 @@ nav{
     padding-left: 5px;
 }
 .sideList >li{
-    margin: 10px 0px;
-    justify-content: space-between;
+    /* margin: 10px 0px; */
+    padding:10px;
     align-items: center;
+    margin-top:10px;
+    border:1px solid black;
+    
+    
+}
+.sideList >li>h5 {
+    margin-bottom: 0;
+    margin-left:10px;
     cursor: pointer;
+    font-size: 20px;
+
 }
