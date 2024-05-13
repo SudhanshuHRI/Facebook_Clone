@@ -130,3 +130,11 @@ nav{
     font-size: 20px;
 
 }
+.singleslider>div{
+    border:1px solid black;
+    min-height: 200px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
