@@ -13,13 +13,13 @@ const Login = () => {
             <div className="row cstm_row">
                 <div className="col-12 col-lg-6 col-sm-12 diiv">
                     <div className='left'>
-                        <img src='https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg' height={50} width={200} />
+                        <img src='https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg' height={50} width={200}  alt='logo' />
                         <h3>
                             Facebook helps you connect and share with the people in your life.
                         </h3>
                     </div>
                 </div>
-                <div className="col-12 col-lg-6 col-sm-12 diiv2 ">
+                <div className="col-12 col-lg-6 col-sm-12 diiv2">
 
                     <Form className='loginform'>
                         <Row className=''>
@@ -47,7 +47,7 @@ const Login = () => {
                         <hr />
                         <Row className='mt-3 text-center'>
                             <div className='buttonDiv'>
-                                <button className='btn  w-60 p-2' style={{backgroundColor:"#42B72A",color:"white"}}>Create new account</button>
+                                <button className='btn  w-60 p-2' style={{ backgroundColor: "#42B72A", color: "white" }}>Create new account</button>
                             </div>
 
                         </Row>
