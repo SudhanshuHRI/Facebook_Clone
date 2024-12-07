@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-
+import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -8,6 +8,8 @@ import Row from 'react-bootstrap/Row';
 
 
 const Login = () => {
+
+    const navigate = useNavigate();
     return (
         <div className="container loginBody">
             <div className="row cstm_row">
@@ -35,7 +37,7 @@ const Login = () => {
                         </Row>
                         <Row className='mt-3'>
                             <div className='buttonDiv '>
-                                <button className='btn btn-primary w-100 p-2'>Log In</button>
+                                <button className='btn btn-primary w-100 p-2' onClick={()=>navigate("/home")}>Log In</button>
                             </div>
 
                         </Row>
