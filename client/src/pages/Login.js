@@ -42,14 +42,14 @@ const Login = () => {
 
                         </Row>
                         <Row className='mt-3'>
-                            <div className=' text-center forgotLink'>
-                                <Link href="#">Forgotten password?</Link>
+                            <div className=' text-center forgotLink' >
+                                <a href="/forgot" >Forgotten password?</a>
                             </div>
                         </Row>
                         <hr />
                         <Row className='mt-3 text-center'>
                             <div className='buttonDiv'>
-                                <button className='btn  w-60 p-2' style={{ backgroundColor: "#42B72A", color: "white" }}>Create new account</button>
+                                <button className='btn  w-60 p-2' style={{ backgroundColor: "#42B72A", color: "white" }} onClick={()=>navigate("/newUser")}>Create new account</button>
                             </div>
 
                         </Row>
