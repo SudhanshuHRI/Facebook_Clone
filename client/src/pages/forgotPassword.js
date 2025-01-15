@@ -14,7 +14,7 @@ const ForgotPassword = () => {
             <Navbar className=" justify-content-between" style={{color:"white"}}>
 
                 <img
-                    src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg"
+                    src="/Logo.png"
                     width="15%"
                     height="50"
                     className="d-inline-block align-top"
