@@ -1,10 +1,8 @@
-import LeftMarket from './MarketComps/LeftMarket';
-import RightMarket from './MarketComps/RightMarket';
+
 const MarketPlace = () => {
     return ( 
         <div>
-            <LeftMarket/>
-            <RightMarket/>
+       <h1>This is market place component</h1>
         </div>
      );
 }
