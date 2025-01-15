@@ -54,9 +54,9 @@ const Login = () => {
 
                         </Row>
                     </Form>
-                    <div className='afterform w-100 text-center mt-3'>
+                    {/* <div className='afterform w-100 text-cegitnter mt-3'>
                         <p>{"   "}<Link href="#">Create a Page</Link>{"   "}for a celebrity, brand, business</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
