@@ -1,0 +1,7 @@
+.homeComponentContainer{
+    max-width: 1600px;
+}
+
+.homeComponentContainer >div>div{
+    overflow-x: scroll;
+}
