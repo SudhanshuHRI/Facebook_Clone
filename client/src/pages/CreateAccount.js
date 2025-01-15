@@ -6,7 +6,7 @@ const CreateAccount = () => {
                 <div className="text-center">
                     <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" width={300} />
                 </div>
-                <div className="formContainer p-2">
+                <div className="formContainer pt-3">
                     <div className="text-center">
                         <h3>Create a new account</h3>
                     </div>
@@ -14,7 +14,7 @@ const CreateAccount = () => {
                         <p>It's quick and easy.</p>
                     </div>
                     <hr />
-                    <div className="container">
+                    <div className="container mt-2">
                         <form class="row g-3">
                             <div class="col-md-6">
 
