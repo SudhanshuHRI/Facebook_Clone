@@ -1,16 +1,19 @@
 import Slider from "react-slick";
 import React from "react";
-import "../../styles/homeComp.css"
+import { FiPlus } from "react-icons/fi";
+import Card from "react-bootstrap/Card";
+import Form from "react-bootstrap/Form";
+import "../../styles/homeComp.css";
 const HomeComp = () => {
   var settings = {
     dots: false,
     infinite: true,
-    speed: 200,
+    // speed: 200,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    //slidesToScroll: 1,
   };
   return (
-    <div className="container-fluid homeComponentContainer" >
+    <div className="container-fluid homeComponentContainer">
       <div className="row">
         <div className="col-3">
           <div>
@@ -106,52 +109,142 @@ const HomeComp = () => {
                 </li>
               </ul>
             </div>
-            
-         
           </div>
         </div>
         <div className="col-6">
-          <div style={{ border: "1px solid black" }}>
+          <div >
             <div className="slider">
               <Slider {...settings}>
-                <div className="singleslider">
-                  <div style={{ backgroundImage: "url('/images.jpg')" }}>
-                    <img src="/unnamed.jpg" alt="img" height={40} width={40} />
-                    <p>Name</p>
+                <div className="singleslider p-2">
+                  <div
+                    style={{ backgroundImage: "url('/images.jpg')" }}
+                    className=""
+                  >
+                    <img
+                      src="/unnamed.jpg"
+                      alt="img"
+                      height={40}
+                      width={40}
+                      className="storyUserImg ms-2 "
+                    />
+                    <div className="mt-2">
+                      <FiPlus className="storyProfileIcon" />
+                      <div
+                        height={30}
+                        width={30}
+                        className="border storyProfileDiv"
+                      >
+                        <p className="text-center pt-4">
+                          <b>Create Story</b>
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="singleslider">
-                  <div style={{ backgroundImage: "url('/img.png')" }}>
-                    <img src="/unnamed.jpg" alt="img" height={40} width={40} />
-                    <p>Name</p>
+                <div className="singleslider p-2">
+                  <div
+                    style={{ backgroundImage: "url('/img.png')" }}
+                    className="p-2"
+                  >
+                    <img
+                      src="/unnamed.jpg"
+                      alt="img"
+                      height={40}
+                      width={40}
+                      className="storyUserImg"
+                    />
                   </div>
                 </div>
-                <div className="singleslider">
-                  <div style={{ backgroundImage: "url('/img1.webp')" }}>
-                    <img src="/unnamed.jpg" alt="img" height={40} width={40} />
-                    <p>Name</p>
+                <div className="singleslider p-2">
+                  <div
+                    style={{ backgroundImage: "url('/img1.webp')" }}
+                    className="p-2"
+                  >
+                    <img
+                      src="/unnamed.jpg"
+                      alt="img"
+                      height={40}
+                      width={40}
+                      className="storyUserImg"
+                    />
                   </div>
                 </div>
-                <div className="singleslider">
-                  <div style={{ backgroundImage: "url('/img2.jpg')" }}>
-                    <img src="/unnamed.jpg" alt="img" height={40} width={40} />
-                    <p>Name</p>
+                <div className="singleslider p-2">
+                  <div
+                    style={{ backgroundImage: "url('/img2.jpg')" }}
+                    className="p-2"
+                  >
+                    <img
+                      src="/unnamed.jpg"
+                      alt="img"
+                      height={40}
+                      width={40}
+                      className="storyUserImg"
+                    />
                   </div>
                 </div>
-                <div className="singleslider">
-                  <div style={{ backgroundImage: "url('/img3.jpg')" }}>
-                    <img src="/unnamed.jpg" alt="img" height={40} width={40} />
-                    <p>Name</p>
+                <div className="singleslider p-2">
+                  <div
+                    style={{ backgroundImage: "url('/img3.jpg')" }}
+                    className="p-2"
+                  >
+                    <img
+                      src="/unnamed.jpg"
+                      alt="img"
+                      height={40}
+                      width={40}
+                      className="storyUserImg"
+                    />
                   </div>
                 </div>
-                <div className="singleslider">
-                  <div style={{ backgroundImage: "url('/img4.jpg')" }}>
-                    <img src="/unnamed.jpg" alt="img" height={40} width={40} />
-                    <p>Name</p>
+                <div className="singleslider p-2">
+                  <div
+                    style={{ backgroundImage: "url('/img4.jpg')" }}
+                    className="p-2"
+                  >
+                    <img
+                      src="/unnamed.jpg"
+                      alt="img"
+                      height={40}
+                      width={40}
+                      className="storyUserImg"
+                    />
                   </div>
                 </div>
               </Slider>
             </div>
+            <section className="HomePagePostingContainer">
+              <Card className="p-2">
+                <div className="d-flex align-item-center justify-content-center mb-2">
+                
+                    <img src="/unnamed.jpg" height={40} width={40}  className="PostingUserImg"/>
+                 
+                  <Form.Control
+                
+                    type="text"
+                    placeholder="What's on your mind, Sudhanshu ?"
+                    defaultValue="Mark"
+                    className="PostingUserInput ms-2"
+                  />
+                </div>
+                <hr />
+                <div className="d-flex align-item-center justify-content-evenly">
+                 <div>
+                  <img src="/resources/videoPostingIcon.png" height={20} width={20} />
+                  <p>Live Video</p>
+                 </div>
+                 <div>
+                  <img src="/resources/picturePostingIcon.png" height={20} width={20} />
+                  <p>Photo/video</p>
+                 </div>
+                 <div>
+                  <img src="/resources/activityPosingIcon.png" height={20} width={20} />
+                  <p>Feeling/activity</p>
+                 </div>
+              
+                </div>
+              </Card>
+            </section>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

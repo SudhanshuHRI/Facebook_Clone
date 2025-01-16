@@ -1,7 +1,46 @@
-.homeComponentContainer{
-    max-width: 1600px;
+.homeComponentContainer {
+  max-width: 1600px;
 }
 
-.homeComponentContainer >div>div{
-    overflow-x: scroll;
+.homeComponentContainer > div > div {
+  overflow-x: scroll;
+}
+
+.storyUserImg{
+  border:4px solid #0866FF;
+  border-radius: 50%;
+}
+.storyProfileDiv{
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  position:absolute;
+  bottom:0px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-sizing: border-box;
+}
+.storyProfileIcon{
+  font-size: 45px;
+  background-color: #0866FF;
+  border-radius: 50%;
+  color:white;
+  border:4px solid white;
+  position: relative;
+ top:154px;
+ z-index: 5;
+  left:67px;
+}
+
+.PostingUserImg{
+ 
+  border-radius: 50%;
+  margin:5px;
+}
+.PostingUserInput{
+ 
+  border-radius: 27px !important;
+}
+.PostingUserInput:focus{
+  box-shadow: none !important;
 }
