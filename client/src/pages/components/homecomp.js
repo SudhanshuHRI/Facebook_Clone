@@ -3,6 +3,7 @@ import React from "react";
 import { FiPlus } from "react-icons/fi";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
+import ListGroup from "react-bootstrap/ListGroup";
 import "../../styles/homeComp.css";
 const HomeComp = () => {
   var settings = {
@@ -112,7 +113,7 @@ const HomeComp = () => {
           </div>
         </div>
         <div className="col-6">
-          <div >
+          <div>
             <div className="slider">
               <Slider {...settings}>
                 <div className="singleslider p-2">
@@ -216,11 +217,14 @@ const HomeComp = () => {
             <section className="HomePagePostingContainer">
               <Card className="p-2">
                 <div className="d-flex align-item-center justify-content-center mb-2">
-                
-                    <img src="/unnamed.jpg" height={40} width={40}  className="PostingUserImg"/>
-                 
+                  <img
+                    src="/unnamed.jpg"
+                    height={40}
+                    width={40}
+                    className="PostingUserImg"
+                  />
+
                   <Form.Control
-                
                     type="text"
                     placeholder="What's on your mind, Sudhanshu ?"
                     defaultValue="Mark"
@@ -228,24 +232,51 @@ const HomeComp = () => {
                   />
                 </div>
                 <hr />
-                <div className="d-flex align-item-center justify-content-evenly">
-                 <div>
-                  <img src="/resources/videoPostingIcon.png" height={20} width={20} />
-                  <p>Live Video</p>
-                 </div>
-                 <div>
-                  <img src="/resources/picturePostingIcon.png" height={20} width={20} />
-                  <p>Photo/video</p>
-                 </div>
-                 <div>
-                  <img src="/resources/activityPosingIcon.png" height={20} width={20} />
-                  <p>Feeling/activity</p>
-                 </div>
-              
+                <div className="d-flex align-items-center justify-content-evenly p-3 postingMediaContainer">
+                  <div className="d-flex">
+                    <img
+                      src="/resources/videoPostingIcon.png"
+                      height={20}
+                      width={20}
+                    />
+                    <p className="m-0 text-secondary ms-1">
+                      <b>Live Video</b>
+                    </p>
+                  </div>
+                  <div className="d-flex align-items-center ">
+                    <img
+                      src="/resources/picturePostingIcon.png"
+                      height={20}
+                      width={20}
+                    />
+                    <p className="m-0 text-secondary ms-1">
+                      <b>Photo/video</b>
+                    </p>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <img
+                      src="/resources/activityPosingIcon.png"
+                      height={20}
+                      width={20}
+                    />
+                    <p className="m-0 text-secondary ms-1">
+                      <b>Feeling/activity</b>
+                    </p>
+                  </div>
                 </div>
               </Card>
             </section>
-            <p>
+            <section>
+              <Card style={{ width: "18rem" }}>
+                <Card.Header>Featured</Card.Header>
+                <ListGroup variant="flush">
+                  <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                  <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                  <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                </ListGroup>
+              </Card>
+            </section>
+            {/* <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -271,7 +302,7 @@ const HomeComp = () => {
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="col-3">
