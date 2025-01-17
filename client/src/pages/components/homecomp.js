@@ -5,6 +5,10 @@ import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import ListGroup from "react-bootstrap/ListGroup";
 import "../../styles/homeComp.css";
+import { BsGlobeAmericas } from "react-icons/bs";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import { IoMdClose } from "react-icons/io";
+
 const HomeComp = () => {
   var settings = {
     dots: false,
@@ -227,7 +231,6 @@ const HomeComp = () => {
                   <Form.Control
                     type="text"
                     placeholder="What's on your mind, Sudhanshu ?"
-                    
                     className="PostingUserInput ms-2"
                   />
                 </div>
@@ -266,14 +269,54 @@ const HomeComp = () => {
                 </div>
               </Card>
             </section>
-            <section className="postContainer">
-              <Card style={{ width: "18rem" }}>
-                <Card.Header>Featured</Card.Header>
-                <ListGroup variant="flush">
-                  <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                  <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                  <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-                </ListGroup>
+            <section className="postContainer mt-2">
+              <Card>
+                <Card.Header>
+                  <div className="PostProfileContainer">
+                    <div>
+                      <img
+                        src="/5MinLogo.jpg"
+                        width={40}
+                        alt="img"
+                        className="PostingUserImg border"
+                      />
+                      <div>
+                        <div>
+                          <b>
+                            5-Minute Crafts <span>.</span>{" "}
+                            <a href="#">Follow</a>
+                          </b>
+                        </div>
+                        <div>
+                          57m<span>.</span>
+                          <BsGlobeAmericas />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border">
+                      <HiOutlineDotsHorizontal />
+                      <IoMdClose />
+                    </div>
+                  </div>
+                </Card.Header>
+                <video controls>
+                  <source src="/videoplayback.mp4" type="video/mp4" />
+                </video>
+                <Card.Footer>
+                  <div>
+                    <div>
+                      <span>icons</span>
+                      <span>shares and comment</span>
+                    </div>
+                    <div>
+                      <div>Like</div>
+                      <div>comment</div>
+                      <div>send</div>
+                      <div>share</div>
+                    </div>
+                  </div>
+                </Card.Footer>
               </Card>
             </section>
             {/* <p>

@@ -47,3 +47,11 @@
 .postingMediaContainer > div{
   cursor: pointer;
 }
+.PostProfileContainer{
+  display: flex;
+  justify-content: space-between;
+}
+.PostProfileContainer > div{
+  border: 1px solid black;
+  display: flex;
+}
