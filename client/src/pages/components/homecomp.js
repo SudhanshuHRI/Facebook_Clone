@@ -8,6 +8,11 @@ import "../../styles/homeComp.css";
 import { BsGlobeAmericas } from "react-icons/bs";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
+import { LuDot } from "react-icons/lu";
+import { AiOutlineLike } from "react-icons/ai";
+import { FaRegComment } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { TbShare3 } from "react-icons/tb";
 
 const HomeComp = () => {
   var settings = {
@@ -15,6 +20,7 @@ const HomeComp = () => {
     infinite: true,
     // speed: 200,
     slidesToShow: 4,
+    arrows: false,
     //slidesToScroll: 1,
   };
   return (
@@ -269,7 +275,7 @@ const HomeComp = () => {
                 </div>
               </Card>
             </section>
-            <section className="postContainer mt-2">
+            <section className="postContainer mt-4">
               <Card>
                 <Card.Header>
                   <div className="PostProfileContainer">
@@ -283,69 +289,206 @@ const HomeComp = () => {
                       <div>
                         <div>
                           <b>
-                            5-Minute Crafts <span>.</span>{" "}
+                            5-Minute Crafts
+                            <LuDot />
                             <a href="#">Follow</a>
                           </b>
                         </div>
                         <div>
-                          57m<span>.</span>
+                          <span className="h6">57m</span>
+                          <LuDot />
                           <BsGlobeAmericas />
                         </div>
                       </div>
                     </div>
 
-                    <div className="border">
-                      <HiOutlineDotsHorizontal />
+                    <div className="postCloseButton">
+                      <HiOutlineDotsHorizontal className="me-2" />
                       <IoMdClose />
                     </div>
                   </div>
                 </Card.Header>
-                <video controls>
+                <video autoplay loop controls>
                   <source src="/videoplayback.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
                 </video>
-                <Card.Footer>
+                <Card.Footer className="p-0">
                   <div>
-                    <div>
-                      <span>icons</span>
-                      <span>shares and comment</span>
+                    <div className="d-flex align-items-center justify-content-between p-3 ">
+                      <div className="d-flex">
+                        <p className="m-0 h5"><span className="m-0 p-0">🤣</span><span>😆</span><span>😇</span></p>
+                        <span>299</span>
+                      </div>
+                      <div>
+                        <span className="h6">5 comment</span>
+                      </div>
                     </div>
-                    <div>
-                      <div>Like</div>
-                      <div>comment</div>
-                      <div>send</div>
-                      <div>share</div>
+                    <hr />
+                    <div className="d-flex align-items-center justify-content-around p-3 ">
+                      <div className="displayFlex w-25">
+                        <AiOutlineLike />{" "}
+                        Like
+                      </div>
+                      <div className="displayFlex w-25">
+                        <FaRegComment />{" "}
+                        comment
+                      </div>
+                      <div className="displayFlex w-25">
+                        <FaWhatsapp />{" "}
+                        send
+                      </div>
+                      <div className="displayFlex w-25">
+                        <TbShare3 />{" "}
+                        share
+                      </div>
                     </div>
                   </div>
                 </Card.Footer>
               </Card>
             </section>
-            {/* <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum
-            </p> */}
+            <section className="postContainer mt-4">
+              <Card>
+                <Card.Header>
+                  <div className="PostProfileContainer">
+                    <div>
+                      <img
+                        src="/5MinLogo.jpg"
+                        width={40}
+                        alt="img"
+                        className="PostingUserImg border"
+                      />
+                      <div>
+                        <div>
+                          <b>
+                            5-Minute Crafts
+                            <LuDot />
+                            <a href="#">Follow</a>
+                          </b>
+                        </div>
+                        <div>
+                          <span className="h6">57m</span>
+                          <LuDot />
+                          <BsGlobeAmericas />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="postCloseButton">
+                      <HiOutlineDotsHorizontal className="me-2" />
+                      <IoMdClose />
+                    </div>
+                  </div>
+                </Card.Header>
+                <video autoplay loop controls>
+                  <source src="/videoplayback.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <Card.Footer className="p-0">
+                  <div>
+                    <div className="d-flex align-items-center justify-content-between p-3 ">
+                      <div className="d-flex">
+                        <p className="m-0 h5"><span className="m-0 p-0">🤣</span><span>😆</span><span>😇</span></p>
+                        <span>299</span>
+                      </div>
+                      <div>
+                        <span className="h6">5 comment</span>
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="d-flex align-items-center justify-content-around p-3 ">
+                      <div className="displayFlex w-25">
+                        <AiOutlineLike />{" "}
+                        Like
+                      </div>
+                      <div className="displayFlex w-25">
+                        <FaRegComment />{" "}
+                        comment
+                      </div>
+                      <div className="displayFlex w-25">
+                        <FaWhatsapp />{" "}
+                        send
+                      </div>
+                      <div className="displayFlex w-25">
+                        <TbShare3 />{" "}
+                        share
+                      </div>
+                    </div>
+                  </div>
+                </Card.Footer>
+              </Card>
+            </section>
+            <section className="postContainer mt-4">
+              <Card>
+                <Card.Header>
+                  <div className="PostProfileContainer">
+                    <div>
+                      <img
+                        src="/5MinLogo.jpg"
+                        width={40}
+                        alt="img"
+                        className="PostingUserImg border"
+                      />
+                      <div>
+                        <div>
+                          <b>
+                            5-Minute Crafts
+                            <LuDot />
+                            <a href="#">Follow</a>
+                          </b>
+                        </div>
+                        <div>
+                          <span className="h6">57m</span>
+                          <LuDot />
+                          <BsGlobeAmericas />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="postCloseButton">
+                      <HiOutlineDotsHorizontal className="me-2" />
+                      <IoMdClose />
+                    </div>
+                  </div>
+                </Card.Header>
+                <video autoplay loop controls>
+                  <source src="/videoplayback.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <Card.Footer className="p-0">
+                  <div>
+                    <div className="d-flex align-items-center justify-content-between p-3 ">
+                      <div className="d-flex">
+                        <p className="m-0 h5"><span className="m-0 p-0">🤣</span><span>😆</span><span>😇</span></p>
+                        <span>299</span>
+                      </div>
+                      <div>
+                        <span className="h6">5 comment</span>
+                      </div>
+                    </div>
+                    <hr />
+                    <div className="d-flex align-items-center justify-content-around p-3 ">
+                      <div className="displayFlex w-25">
+                        <AiOutlineLike />{" "}
+                        Like
+                      </div>
+                      <div className="displayFlex w-25">
+                        <FaRegComment />{" "}
+                        comment
+                      </div>
+                      <div className="displayFlex w-25">
+                        <FaWhatsapp />{" "}
+                        send
+                      </div>
+                      <div className="displayFlex w-25">
+                        <TbShare3 />{" "}
+                        share
+                      </div>
+                    </div>
+                  </div>
+                </Card.Footer>
+              </Card>
+            </section>
+           
           </div>
         </div>
         <div className="col-3">
