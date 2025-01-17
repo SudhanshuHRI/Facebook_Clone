@@ -118,17 +118,17 @@ const HomeComp = () => {
               <Slider {...settings}>
                 <div className="singleslider p-2">
                   <div
-                    style={{ backgroundImage: "url('/images.jpg')" }}
+                    style={{ backgroundImage: "url('/unnamed.jpg')" }}
                     className=""
                   >
-                    <img
+                    {/* <img
                       src="/unnamed.jpg"
                       alt="img"
                       height={40}
                       width={40}
                       className="storyUserImg ms-2 "
-                    />
-                    <div className="mt-2">
+                    /> */}
+                    <div className="">
                       <FiPlus className="storyProfileIcon" />
                       <div
                         height={30}
@@ -227,7 +227,7 @@ const HomeComp = () => {
                   <Form.Control
                     type="text"
                     placeholder="What's on your mind, Sudhanshu ?"
-                    defaultValue="Mark"
+                    
                     className="PostingUserInput ms-2"
                   />
                 </div>
@@ -266,7 +266,7 @@ const HomeComp = () => {
                 </div>
               </Card>
             </section>
-            <section>
+            <section className="postContainer">
               <Card style={{ width: "18rem" }}>
                 <Card.Header>Featured</Card.Header>
                 <ListGroup variant="flush">
