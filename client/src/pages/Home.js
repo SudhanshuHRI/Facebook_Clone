@@ -12,6 +12,7 @@ import { FaGamepad } from "react-icons/fa6";
 import { TbGridDots } from "react-icons/tb";
 import { FaFacebookMessenger } from "react-icons/fa";
 import { RiNotification2Fill } from "react-icons/ri";
+import { FaUserFriends } from "react-icons/fa";
 import HomeComp from './components/homecomp';
 import GameComp from './components/gamecomp';
 import GroupComp from './components/groupscomp';
@@ -55,14 +56,14 @@ const Home = () => {
                                 <Tooltip title="Video">
                                     <Tab label={<MdOutlineOndemandVideo />} className='tabIcons' />
                                 </Tooltip>
-                                <Tooltip title="Marketplace">
-                                    <Tab label={<AiOutlineShop />} className='tabIcons' />
+                                <Tooltip title="Messanger">
+                                    <Tab label={<FaFacebookMessenger />} className='tabIcons' />
                                 </Tooltip>
-                                <Tooltip title="Groups">
-                                    <Tab label={<RiGroup2Line />} className='tabIcons' />
+                                <Tooltip title="Friends">
+                                    <Tab label={<FaUserFriends />} className='tabIcons' />
                                 </Tooltip>
-                                <Tooltip title="Gaming">
-                                    <Tab label={<FaGamepad />} className='tabIcons' />
+                                <Tooltip title="Notifications">
+                                    <Tab label={<RiNotification2Fill />} className='tabIcons' />
                                 </Tooltip>
                             </Tabs>
 
@@ -71,15 +72,15 @@ const Home = () => {
                         {/* navbar icons */}
 
                         <div className='navRightDiv'>
-                            <Tooltip title='Menu'>
+                            {/* <Tooltip title='Menu'>
                                 <span className='navRight '><TbGridDots /></span>
-                            </Tooltip>
-                            <Tooltip title='Messenger'>
+                            </Tooltip> */}
+                            {/* <Tooltip title='Messenger'>
                                 <span className='navRight'><FaFacebookMessenger /></span>
-                            </Tooltip>
-                            <Tooltip title='Notifications'>
+                            </Tooltip> */}
+                            {/* <Tooltip title='Notifications'>
                                 <span className='navRight'><RiNotification2Fill /></span>
-                            </Tooltip>
+                            </Tooltip> */}
                             <Tooltip title='Account'>
                                 <span className=' useimg'><img src="/resources/unnamed.jpg" alt="userimg" /></span>
                             </Tooltip>

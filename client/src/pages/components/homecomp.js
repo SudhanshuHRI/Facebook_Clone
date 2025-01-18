@@ -127,20 +127,14 @@ const HomeComp = () => {
         </div>
         <div className="col-6">
           <div>
-            <div className="slider">
+            {/* <div className="slider">
               <Slider {...settings}>
                 <div className="singleslider p-2">
                   <div
                     style={{ backgroundImage: "url('/unnamed.jpg')" }}
                     className=""
                   >
-                    {/* <img
-                      src="/unnamed.jpg"
-                      alt="img"
-                      height={40}
-                      width={40}
-                      className="storyUserImg ms-2 "
-                    /> */}
+               
                     <div className="">
                       <FiPlus className="storyProfileIcon" />
                       <div
@@ -226,8 +220,8 @@ const HomeComp = () => {
                   </div>
                 </div>
               </Slider>
-            </div>
-            <section className="HomePagePostingContainer">
+            </div> */}
+            <section className="HomePagePostingContainer mt-4">
               <Card className="p-2">
                 <div className="d-flex align-item-center justify-content-center mb-2">
                   <img
