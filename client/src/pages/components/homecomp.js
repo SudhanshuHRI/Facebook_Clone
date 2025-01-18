@@ -17,12 +17,15 @@ import { TbShare3 } from "react-icons/tb";
 const HomeComp = () => {
   var settings = {
     dots: false,
-    infinite: true,
+    //infinite: true,
     // speed: 200,
     slidesToShow: 4,
     arrows: false,
     //slidesToScroll: 1,
+    
   };
+
+
   return (
     <div className="container-fluid homeComponentContainer">
       <div className="row">
