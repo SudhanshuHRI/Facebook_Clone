@@ -143,3 +143,19 @@ nav{
     box-shadow: 2px 2px 5px 5px lightgray;
     
 }
+.overRide{
+    all:unset;
+}
+.overRide:hover{
+    all:unset;
+}
+.overRide:active{
+    all:unset !important;
+}
+.NavBarUserDetails{
+    border:1px solid black;
+}
+.NavBarUserDetails >div>img{
+    border-radius: 50%;
+    padding:20px;
+}

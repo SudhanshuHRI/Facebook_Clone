@@ -89,22 +89,38 @@ const Home = () => {
               {/* <Tooltip title='Notifications'>
                                 <span className='navRight'><RiNotification2Fill /></span>
                             </Tooltip> */}
-              <Tooltip title="Account">
+              <Tooltip>
                 <Dropdown>
-                  <Dropdown.Toggle id="dropdown-basic">
+                  <Dropdown.Toggle
+                    id="dropdown-basic"
+                    className="overRide dropdown-toggle btn"
+                  >
                     <span className=" useimg">
                       <img src="/resources/unnamed.jpg" alt="userimg" />
                     </span>
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">
-                      Another action
-                    </Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">
-                      Something else
-                    </Dropdown.Item>
+                    <div className="NavBarUserDetails">
+                      <div className="d-flex align-items-center justify-content-center border ">
+                        <img
+                          src="/resources/unnamed.jpg"
+                          alt="userImg"
+                          width={150}
+                        />
+                      </div>
+                      <div>
+                        <p>Sudhanshu Srivastava</p>
+                        <p>5 friends</p>
+                      </div>
+                    </div>
+                    {/* <Dropdown.Item >
+                        <div>
+                            <h1>sdfds</h1>
+                        </div>
+                    </Dropdown.Item> */}
+                    <hr />
+                    <Dropdown.Item href="#/action-3">Log out</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </Tooltip>
