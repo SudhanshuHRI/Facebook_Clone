@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Tooltip from "@mui/material/Tooltip";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -18,7 +18,12 @@ import GameComp from "./components/gamecomp";
 import GroupComp from "./components/groupscomp";
 import Marketplace from "./components/marketplace";
 import VideoComp from "./components/videocomp";
-import Dropdown from "react-bootstrap/Dropdown";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 // import MarketPlace from './components/marketplace';
 
 const Home = () => {
@@ -27,107 +32,59 @@ const Home = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
- 
+
   return (
-    <div>
-      <div>
-        <div>
-          <nav className="d-flex justify-content-between p-1">
-            {/* logo and search box */}
-            <div className="d-flex align-items-center logoDiv">
-              <div>
-                <span className="fb-logo">
-                  <FaFacebook />
-                </span>
-              </div>
+    <>
+      <Navbar expand="lg" className="bg-body-tertiary">
+        <Container fluid>
+          <Navbar.Brand>
+            <FaFacebook />
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <IoSearch />
+            </Form>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: "100px" }}
+              navbarScroll
+            >
+              <Nav.Link href="#action1">Home</Nav.Link>
+              <Nav.Link href="#action2">Link</Nav.Link>
+              <NavDropdown title="Link" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action4">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action5">
+                  Something else here
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="#" disabled>
+                Link
+              </Nav.Link>
+            </Nav>
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-success">Search</Button>
+            </Form>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
-              <div className="searchBox">
-                <span>
-                  <IoSearch />
-                </span>
-                <input type="text" placeholder="Search Facebook" />
-              </div>
-            </div>
-
-            {/* tabs section */}
-            <div>
-              <Tabs
-                value={value}
-                onChange={handleChange}
-                aria-label="disabled tabs example"
-              >
-                <Tooltip title="Home">
-                  <Tab label={<GoHomeFill />} className="tabIcons" />
-                </Tooltip>
-                <Tooltip title="Friends">
-                  <Tab label={<FaUserFriends />} className="tabIcons" />
-                </Tooltip>
-                <Tooltip title="Messanger">
-                  <Tab label={<FaFacebookMessenger />} className="tabIcons" />
-                </Tooltip>
-                <Tooltip title="Video">
-                  <Tab
-                    label={<MdOutlineOndemandVideo />}
-                    className="tabIcons"
-                  />
-                </Tooltip>
-                <Tooltip title="Notifications">
-                  <Tab label={<RiNotification2Fill />} className="tabIcons" />
-                </Tooltip>
-              </Tabs>
-            </div>
-
-            {/* navbar icons */}
-
-            <div className="navRightDiv">
-              {/* <Tooltip title='Menu'>
-                                <span className='navRight '><TbGridDots /></span>
-                            </Tooltip> */}
-              {/* <Tooltip title='Messenger'>
-                                <span className='navRight'><FaFacebookMessenger /></span>
-                            </Tooltip> */}
-              {/* <Tooltip title='Notifications'>
-                                <span className='navRight'><RiNotification2Fill /></span>
-                            </Tooltip> */}
-              <Tooltip>
-                <Dropdown>
-                  <Dropdown.Toggle
-                    id="dropdown-basic"
-                    className="overRide dropdown-toggle btn"
-                  >
-                    <span className=" useimg">
-                      <img src="/resources/unnamed.jpg" alt="userimg" />
-                    </span>
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <div className="NavBarUserDetails">
-                      <div className="d-flex align-items-center justify-content-center  ">
-                        <img
-                          src="/resources/unnamed.jpg"
-                          alt="userImg"
-                          width={150}
-                        />
-                      </div>
-                      <div className="text-center">
-                        <p><b>Sudhanshu </b></p>
-                        <p>5 friends</p>
-                      </div>
-                    </div>
-                    {/* <Dropdown.Item >
-                        <div>
-                            <h1>sdfds</h1>
-                        </div>
-                    </Dropdown.Item> */}
-                    <hr />
-                    <Dropdown.Item href="#/action-3">Log out</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </Tooltip>
-            </div>
-          </nav>
-        </div>
-      </div>
       <div className="contailer-fluid">
         {value == 0 ? (
           <HomeComp />
@@ -141,7 +98,7 @@ const Home = () => {
           <GameComp />
         ) : null}
       </div>
-    </div>
+    </>
   );
 };
 
