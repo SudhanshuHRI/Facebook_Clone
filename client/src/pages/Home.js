@@ -1,7 +1,9 @@
 import React from "react";
-import Tooltip from "@mui/material/Tooltip";
-import Tabs from "@mui/material/Tabs";
+import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
 import { FaFacebook } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { GoHomeFill } from "react-icons/go";
@@ -23,7 +25,9 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import Dropdown from "react-bootstrap/Dropdown";
+import Image from "react-bootstrap/Image";
+
 // import MarketPlace from './components/marketplace';
 
 const Home = () => {
@@ -37,8 +41,8 @@ const Home = () => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
-          <Navbar.Brand>
-            <FaFacebook />
+          <Navbar.Brand className="d-flex">
+            <FaFacebook className="h3" />
             <Form className="d-flex">
               <Form.Control
                 type="search"
@@ -56,31 +60,41 @@ const Home = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Link</Nav.Link>
-              <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#" disabled>
-                Link
+              <Nav.Link href="#action1">
+                <TabContext value={value}>
+                  <TabList
+                    onChange={handleChange}
+                    aria-label="lab API tabs example"
+                  >
+                    <Tab label={<GoHomeFill className="h4" />} value="0" />
+                    <Tab label={<FaUserFriends className="h4" />} value="1" />
+                    <Tab
+                      label={<FaFacebookMessenger className="h4" />}
+                      value="2"
+                    />
+                    <Tab
+                      label={<MdOutlineOndemandVideo className="h4" />}
+                      value="3"
+                    />
+                    <Tab
+                      label={<RiNotification2Fill className="h4" />}
+                      value="4"
+                    />
+                  </TabList>
+                </TabContext>
               </Nav.Link>
             </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic">
+                <Image src="/unnamed.jpg" roundedCircle width={40} />
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Navbar.Collapse>
         </Container>
       </Navbar>
