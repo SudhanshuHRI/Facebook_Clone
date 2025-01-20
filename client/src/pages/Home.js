@@ -27,7 +27,7 @@ const Home = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  console.log(value);
+ 
   return (
     <div>
       <div>
@@ -59,17 +59,17 @@ const Home = () => {
                 <Tooltip title="Home">
                   <Tab label={<GoHomeFill />} className="tabIcons" />
                 </Tooltip>
+                <Tooltip title="Friends">
+                  <Tab label={<FaUserFriends />} className="tabIcons" />
+                </Tooltip>
+                <Tooltip title="Messanger">
+                  <Tab label={<FaFacebookMessenger />} className="tabIcons" />
+                </Tooltip>
                 <Tooltip title="Video">
                   <Tab
                     label={<MdOutlineOndemandVideo />}
                     className="tabIcons"
                   />
-                </Tooltip>
-                <Tooltip title="Messanger">
-                  <Tab label={<FaFacebookMessenger />} className="tabIcons" />
-                </Tooltip>
-                <Tooltip title="Friends">
-                  <Tab label={<FaUserFriends />} className="tabIcons" />
                 </Tooltip>
                 <Tooltip title="Notifications">
                   <Tab label={<RiNotification2Fill />} className="tabIcons" />
@@ -102,15 +102,15 @@ const Home = () => {
 
                   <Dropdown.Menu>
                     <div className="NavBarUserDetails">
-                      <div className="d-flex align-items-center justify-content-center border ">
+                      <div className="d-flex align-items-center justify-content-center  ">
                         <img
                           src="/resources/unnamed.jpg"
                           alt="userImg"
                           width={150}
                         />
                       </div>
-                      <div>
-                        <p>Sudhanshu Srivastava</p>
+                      <div className="text-center">
+                        <p><b>Sudhanshu </b></p>
                         <p>5 friends</p>
                       </div>
                     </div>
